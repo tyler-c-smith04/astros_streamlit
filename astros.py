@@ -152,8 +152,6 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-# Assuming 'astros' is your DataFrame and is already loaded
-
 # Function to plot the overall wins and losses over time
 def plot_overall_wins_losses(astros):
     astros_season_record_filtered = astros[astros['Season'] != 2020]  # Exclude the 2020 season
