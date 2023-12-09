@@ -32,7 +32,8 @@ def main():
     st.title("Houston Astros Divisional Leads and Deficits")
 
     # Load your data here
-    astros = pd.read_csv('/Users/tylersmith/Desktop/STAT386/astros_streamlit/astros.csv')
+    astros = pd.read_csv('astros.csv')
+
 
     seasons = range(2017, 2024)
     selected_season = st.selectbox("Select a Season", seasons)
@@ -101,7 +102,8 @@ def main():
     st.title("Astros Runs Distribution")
 
     # Load your data here
-    astros = pd.read_csv('/Users/tylersmith/Desktop/STAT386/astros_streamlit/astros.csv')
+    astros = pd.read_csv('astros.csv')
+
 
     seasons = astros['Season'].unique()
     selected_season = st.selectbox("Select a Season", seasons)
@@ -124,7 +126,7 @@ def main():
     st.title("Record Against Opponents")
 
     # Load your data here if it's not already loaded
-    astros = pd.read_csv('/Users/tylersmith/Desktop/STAT386/astros_streamlit/astros.csv')
+    astros = pd.read_csv('astros.csv')
 
     # Dropdown for selecting the opponent, sorted alphabetically
     opponents = sorted(astros['Opp'].unique())
@@ -202,7 +204,7 @@ def main():
     st.title("Astros Regular Season Success")
 
     # Load your data here if it's not already loaded
-    astros = pd.read_csv('/Users/tylersmith/Desktop/STAT386/astros_streamlit/astros.csv')
+    astros = pd.read_csv('astros.csv')
 
     # Calculate the length of the streaks
     astros['Win Streak'] = astros['Streak'].apply(lambda x: x.count('+'))
@@ -433,7 +435,8 @@ import matplotlib.pyplot as plt
 
 st.title('Astros Success Against Each Division')
 
-astros = pd.read_csv('/Users/tylersmith/Desktop/STAT386/astros_streamlit/astros.csv')
+astros = pd.read_csv('astros.csv')
+
 
 # Streamlit user interface for selecting season and division
 season = st.selectbox('Select Season', range(2017, 2024))
