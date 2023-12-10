@@ -474,22 +474,26 @@ else:
     # Calculate win percentage
     division_data['Win_Percentage'] = division_data['W'] / (division_data['W'] + division_data['L'])
 
-    # Create a horizontal bar plot with Astros colors
-    plt.figure(figsize=(12, 8))
-    barplot = sns.barplot(x='Win_Percentage', y='Opp', data=division_data, palette=['#002D62', '#EB6E1F'])
+    # Layout for chart and table
+    col1, col2 = st.columns([2, 1])  # Adjust the ratio if needed
 
-    # Add title and labels
-    plt.title(f'Win Percentage of Houston Astros against {division} in {season}')
-    plt.xlabel('Win Percentage')
-    plt.ylabel('Teams')
+    # Chart in the first column
+    with col1:
+        plt.figure(figsize=(12, 8))
+        barplot = sns.barplot(x='Win_Percentage', y='Opp', data=division_data, palette=['#002D62', '#EB6E1F'])
+        plt.title(f'Win Percentage of Houston Astros against {division} in {season}')
+        plt.xlabel('Win Percentage')
+        plt.ylabel('Teams')
+        for p in barplot.patches:
+            width = p.get_width()
+            plt.text(width if width > 0.01 else 0.01, p.get_y() + p.get_height() / 2, f'{width:.3f}', ha = 'left', va = 'center')
+        st.pyplot(plt)
 
-    # Annotate each bar
-    for p in barplot.patches:
-        width = p.get_width()
-        plt.text(width if width > 0.01 else 0.01, p.get_y() + p.get_height() / 2, f'{width:.3f}', ha = 'left', va = 'center')
+    # Table in the second column
+    with col2:
+        # You can adjust the DataFrame if you want to show specific columns only
+        st.table(division_data[['Opp', 'W', 'L']].set_index('Opp'))
 
-    # Display the plot
-    st.pyplot(plt)
 
 
 
