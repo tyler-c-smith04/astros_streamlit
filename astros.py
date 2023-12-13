@@ -484,7 +484,9 @@ def main():
 if __name__ == "__main__":
     main()
 
-
+st.markdown("""
+I hope you enjoyed exploring my Houston Astros dashboard. Baseball is the best and I am glad that I got to share my data analysis with you. Feel free to check out my [GitHub Repository](https://github.com/tyler-c-smith04/astros_streamlit) to see how this project came together!
+""")
 
 
 
