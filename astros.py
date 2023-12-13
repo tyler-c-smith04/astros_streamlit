@@ -453,11 +453,5 @@ if __name__ == "__main__":
     main()
 
 st.markdown("""
-I hope you enjoyed exploring my Houston Astros dashboard. Baseball is the best and I am glad that I got to share my data analysis with you. Feel free to check out my [GitHub Repository](https://github.com/tyler-c-smith04/astros_streamlit) to see how this project came together!
+I hope you enjoyed exploring my Houston Astros dashboard. Baseball is the best and I am glad that I got to share my data analysis with you. Feel free to check out my [GitHub Repository](https://github.com/tyler-c-smith04/astros_streamlit) or [my blog](https://tyler-c-smith04.github.io/blog/2023/12/05/golden-era.html) to see how this project came together!
 """)
-
-
-
-
-
-
