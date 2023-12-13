@@ -1,0 +1,14 @@
+Justin Ross said:
+- I really like your dashboard. Just a couple things. It might be worth adding a sentence or two that describes exactly what each graph is showing. I know each graph already has a title but I think a little more information would be beneficial for the user. Something like: “Select a (something) so that you can see (something)”. Also, I noticed that none of the graphs have tooltips, so you might want to see if you can incorporate tooltips to your graphs. The Tier 1 requirements say “Include descriptive captions or tooltips for each visualization to provide context and explanations for your findings.”
+
+Nate Lewis said:
+- I don’t know if this could be easily implemented but I wish that for the “Astros Success Against Each Division” section there was a way to look at the record against each division for the whole 7 years as opposed to only season by season. Also maybe in the table under the plot you could add an overall section that shows the wins and losses against all the teams combined in addition to each team individually.
+
+Clint Smith said:
+- I noticed a few issues in your data filtering. There doesn't appear to be divisional data against the NL Central in 2020. There is an error that is output. I would make sure to go through each possible year and division that the user could select and make sure all bugs are resolved.
+
+From the feeback obtained for my dashboard, I implemented changes regarding the filtering of my data mostly. I made sure that all bugs were accounted for by making my dashboard output 'No data available' messages if a user has selected to view a combination of variables where no data is present. This resolved the problem of scary bugs in my dashboard.
+
+I also implemented Nate's idea of including an Overall record against each division as a whole when the user selects a specific division.
+
+I implemented Justin's feedback of including small writeups to introduce each element of my dashboard. I also made my plots interactive by including tooltips that inform the users when they hover over the plots.
